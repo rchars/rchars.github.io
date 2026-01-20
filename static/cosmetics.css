@@ -1,0 +1,23 @@
+body {
+	font-family: "Courier New"; /* Ta czczionka jest web-safe */
+	background-color: black;
+	color: #aaffaa;
+}
+table {
+	border-collapse: collapse;
+}
+td, th {
+	border: 1px solid #aaffaa;
+	padding: 8px;
+}
+ul {
+	margin: 0;
+	padding: 0; /* Usuń miejsce przed kropką */
+	list-style-position: inside; /* Nie wychodź za div */
+}
+a {
+	color: #00ffff;
+}
+a:hover {
+	color: #ffff00;
+}

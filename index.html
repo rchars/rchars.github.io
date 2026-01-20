@@ -1,102 +1,95 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Rchars - index mainpage</title>
 		<style>
 			html, body {
 				height: 100%;
+				width: 100%;
 				margin: 0;
-			}	
-			body {
+				padding: 0;
+			}
+			.wrapper {
 				display: flex;
-				justify-content: center; /* Środkowanie poziome */
-				align-items: center; /* Środkowanie pionowe */
-
-				font-family: "Courier New"; /* Ta czczionka jest web-safe */
-				background-color: black;
-				color: #aaffaa;
+				flex-direction: column;
+				/*
+					To jest potrzebne, żeby wrapper był zawsze rozciągnięty na wielkość body
+				*/
+				min-height: 100vh;
 			}
-			table {
-				border-collapse: collapse;
+			main, header, footer {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
 			}
-			td, th {
-				border: 1px solid #aaffaa;
-				padding: 8px;
+			header {
+				border-bottom: solid 1px;
+			}
+			main {
+				padding-bottom: 4px;
+				padding-top: 4px;
+				gap: 8px;
+				flex: 1; /* To jest potrzebne, żeby wypchać footer na dół */
+			}
+			footer {
+				border-top: solid 1px;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			}
+			.main-elem {
+				border: 1px solid;
+				padding: 4px;
+  				width: 50%;
 			}
 		</style>
+		<link rel="stylesheet" href="static/cosmetics.css">
 	</head>
 	<body>
-		<main>
-			<table>
-				<tr>
-					<th colspan="4">Current terminal colorscheme</th>
-				</tr>
-				<tr>
-					<th>Name</th>
-					<th>Color</th>
-					<th>Intense color</th>
-					<th>Faint color</th>
-				</tr>
-				<tr>
-					<td>Foreground</td>
-					<td>#aaffaa</td>
-					<td>#00ff00</td>
-					<td>#00dd00</td>
-				</tr>
-				<tr>
-					<td>Background</td>
-					<td>#000000</td>
-					<td>#000000</td>
-					<td>#000000</td>
-				</tr>
-				<tr>
-					<td>Color 1</td>
-					<td>#000000</td>
-					<td>#686868</td>
-					<td>#181818</td>
-				</tr>
-				<tr>
-					<td>Color 2</td>
-					<td>#fa4b4b</td>
-					<td>#ff5454</td>
-					<td>#651919</td>
-				</tr>
-				<tr>
-					<td>Color 3</td>
-					<td>#18b218</td>
-					<td>#54ff54</td>
-					<td>#006500</td>
-				</tr>
-				<tr>
-					<td>Color 4</td>
-					<td>#b26818</td>
-					<td>#ffff54</td>
-					<td>#654a00</td>
-				</tr>
-				<tr>
-					<td>Color 5</td>
-					<td>#1818b2</td>
-					<td>#5454ff</td>
-					<td>#000065</td>
-				</tr>
-				<tr>
-					<td>Color 6</td>
-					<td>#e11ee1</td>
-					<td>#ff54ff</td>
-					<td>#5f055f</td>
-				</tr>
-				<tr>
-					<td>Color 7</td>
-					<td>#18b2b2</td>
-					<td>#54ffff</td>
-					<td>#006565</td>
-				</tr>
-				<tr>
-					<td>Color 8</td>
-					<td>#b2b2b2</td>
-					<td>#ffffff</td>
-					<td>#656565</td>
-				</tr>
-			</table>
-		</main>
+		<div class="wrapper">
+			<header>
+				<h1>Rchars - index mainpage</h1>
+			</header>
+			<main>
+				<div id="left" class="main-elem">
+					<ul>
+						<li>
+							<a href="left/terminal_colorscheme.html">terminal colorscheme</a>
+						</li>
+						<li>
+							<a href="left/sublime_config.html">sublime config</a>
+						</li>
+					</ul>
+				</div>
+				<div id="right" class="main-elem">
+					<ul>
+						<li>
+							<a href="right/kernel.html">kernel bullshit</a>
+						</li>
+						<li>
+							<a href="right/nftables.html">nftables</a>
+						</li>
+						<li>
+							<a href="right/libvirt.html">libvirt</a>
+						</li>
+						<li>
+							<a href="right/python.html">python</a>
+						</li>
+						<li>
+							<a href="right/wine.html">wine</a>
+						</li>
+						<li>
+							<a href="right/qemu.html">qemu</a>
+						</li>
+						<li>
+							<a href="right/c.html">c</a>
+						</li>
+					</ul>
+				</div>
+			</main>
+			<footer>
+				<h6>Just a main page for my silly stuff</h6>
+			</footer>
+		</div>
 	</body>
 </html>

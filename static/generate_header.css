@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#subpage-header {
+    border-bottom: solid 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
